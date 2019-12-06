@@ -3,15 +3,15 @@ def nyc_pigeon_organizer(data)
   data.each do |key, value|
     value.each do |new_value, names|
       names.each do |name|
-        if !another_hash[name]
-          another_hash[name] = {}
+        if !new_hash[name]
+          new_hash[name] = {}
         end
-        if !another_hash[name][key]
-          another_hash[name][key] = []
+        if !new_hash[name][key]
+          new_hash[name][key] = []
         end
-        another_hash[name][key] << new_value.to_s
+        new_hash[name][key] << new_value.to_s
       end
     end
   end
-  another_hash
+  new_hash
 end
